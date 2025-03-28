@@ -57,22 +57,22 @@
 	};
 
 	cooling-maps {
-		map1 {
+		map0 {
 			trip = <&cpu_passive>;
 			cooling-device = <&pwm-fan 0 1>;
 		};
 
-		map2 {
+		map1 {
 			trip = <&cpu_active>;
 			cooling-device = <&pwm-fan 1 2>;
 		};
 
-		map3 {
+		map2 {
 			trip = <&cpu_warm>;
 			cooling-device = <&pwm-fan 2 3>;
 		};
 
-		map4 {
+		map3 {
 			trip = <&cpu_hot>;
 			cooling-device = <&pwm-fan 3 4>;
 		};
