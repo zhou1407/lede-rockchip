@@ -11,7 +11,7 @@
 #include "rk3568.dtsi"
 
 / {
-       fan: pwm-fan {
+        pwm-fan {
 		compatible = "pwm-fan";
 		cooling-levels = <0 100 150 200 255>;
 		#cooling-cells = <2>;
@@ -20,7 +20,7 @@
 	aliases {
 		mmc0 = &sdmmc0;
 		mmc1 = &sdhci;
-
+                fan = &pwm-fan;
 		led-boot = &led_work;
 		led-failsafe = &led_work;
 		led-running = &led_work;
