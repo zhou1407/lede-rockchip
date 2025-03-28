@@ -10,10 +10,9 @@
 	compatible = "hinlink,opc-h69k", "rockchip,rk3568";
 
 	aliases {
-		ethernet0 = &gmac0;
-		ethernet1 = &gmac1;
-		ethernet2 = &rtl8125_2;
-		ethernet3 = &rtl8125_1;
+		ethernet0 = &gmac1;
+		ethernet1 = &rtl8125_2;
+		ethernet2 = &rtl8125_1;
 	};
 
 	vcc5v0_ahci: vcc5v0-ahci {
