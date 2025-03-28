@@ -26,5 +26,5 @@ do
 
   echo "temp: $temp, duty: $DUTY"
 
-  sleep 60s
+  sleep 5s
 done
