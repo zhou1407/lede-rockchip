@@ -28,9 +28,15 @@
 		vin-supply = <&vcc5v0_sys>;
 	};
 };
-		&cpu_thermal: cpu-thermal {
+        pwm-fan {
+		compatible = "pwm-fan";
+		cooling-levels = <0 100 150 200 255>;
+		#cooling-cells = <2>;
+		pwms = <&pwm0 0 50000 0>;
+	};
+	&cpu_thermal: cpu-thermal {
 
-	trips {
+	        trips {
 		cpu_passive: cpu_passive {
 			temperature = <40000>;
 			hysteresis = <2000>;
