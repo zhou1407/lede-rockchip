@@ -27,13 +27,13 @@
 		regulator-name = "vcc5v0_ahci";
 		vin-supply = <&vcc5v0_sys>;
 	};
-};
-        pwm-fan {
+        pwm-fan: pwm-fan {
 		compatible = "pwm-fan";
 		cooling-levels = <0 100 150 200 255>;
 		#cooling-cells = <2>;
 		pwms = <&pwm0 0 50000 0>;
 	};
+};
 	&cpu_thermal: cpu-thermal {
 
 	        trips {
@@ -63,22 +63,22 @@
 	};
 
 	cooling-maps {
-		map0 {
+		map1 {
 			trip = <&cpu_passive>;
 			cooling-device = <&pwm-fan 0 1>;
 		};
 
-		map1 {
+		map2 {
 			trip = <&cpu_active>;
 			cooling-device = <&pwm-fan 1 2>;
 		};
 
-		map2 {
+		map3 {
 			trip = <&cpu_warm>;
 			cooling-device = <&pwm-fan 2 3>;
 		};
 
-		map3 {
+		map4 {
 			trip = <&cpu_hot>;
 			cooling-device = <&pwm-fan 3 4>;
 		};
