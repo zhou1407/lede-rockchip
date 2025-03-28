@@ -20,7 +20,6 @@
 	aliases {
 		mmc0 = &sdmmc0;
 		mmc1 = &sdhci;
-                fan = &pwm-fan;
 		led-boot = &led_work;
 		led-failsafe = &led_work;
 		led-running = &led_work;
