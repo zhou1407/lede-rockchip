@@ -3,3 +3,5 @@ src-git luci https://github.com/DHDAXCW/luci
 src-git routing https://github.com/coolsnowwolf/routing
 src-git telephony https://github.com/coolsnowwolf/telephony.git
 src-git istore https://github.com/linkease/istore;main
+src-git smpackage https://github.com/kenzok8/small-package
+src-git package https://github.com/zhou1407/5G-Modem-Support
