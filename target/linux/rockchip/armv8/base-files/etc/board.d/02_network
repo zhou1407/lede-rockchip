@@ -32,9 +32,11 @@ rockchip_setup_interfaces()
 		ucidef_set_interfaces_lan_wan "eth0" "wwan0"
 		;;
 	hinlink,opc-h68k|\
-	hinlink,opc-h69k|\
 	embedfire,lubancat-2n)
 		ucidef_set_interfaces_lan_wan "eth1 eth2 eth3" "eth0"
+		;;
+	hinlink,opc-h69k)
+                ucidef_set_interfaces_lan_wan "eth1 eth2" "eth0"
 		;;
 	hinlink,h88k)
 		ucidef_set_interfaces_lan_wan "eth1 eth2 eth3 eth4" "eth0"
