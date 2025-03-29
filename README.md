@@ -1,26 +1,10 @@
 ## The source code is suitable for Rockchip OpenWrt SDK
 ### Only supported devices:
-```
-embedfire_doornet1
-embedfire_doornet2
-embedfire_lubancat1
-embedfire_lubancat1n
-embedfire_lubancat2
-embedfire_lubancat2n
-friendlyarm_nanopi-r2c
-friendlyarm_nanopi-r2s
-friendlyarm_nanopi-r3s
-friendlyarm_nanopi-r4s
-friendlyarm_nanopi-r4se
-friendlyarm_nanopi-r5s
-friendlyarm_nanopi-r5c
-friendlyarm_nanopi-r6c
-friendlyarm_nanopi-r6s
-friendlyarm_nanopc-t6
+``
 hinlink_opc-h66k
 hinlink_opc-h68k
 hinlink_opc-h69k
-hinlink_h88k
+
 ```
 
 ### Next plan to add equipment:
