@@ -28,75 +28,6 @@
 		vin-supply = <&vcc5v0_sys>;
 	};
 
-   thermal_zones {
-        cpu_thermal: cpu-thermal {
-            trips {
-                cpu_cool: cpu_cool {
-                    temperature = <1000>;
-                    hysteresis = <2000>;
-                    type = "passive";
-                };
-
-                cpu_passive: cpu_passive {
-                    temperature = <40000>;
-                    hysteresis = <2000>;
-                    type = "passive";
-                };
-
-                cpu_active: cpu_active {
-                    temperature = <50000>;
-                    hysteresis = <2000>;
-                    type = "passive";
-                };
-
-                cpu_warm: cpu_warm {
-                    temperature = <60000>;
-                    hysteresis = <2000>;
-                    type = "passive";
-                };
-
-                cpu_hot: cpu_hot {
-                    temperature = <70000>;
-                    hysteresis = <2000>;
-                    type = "passive";
-                };
-
-                // 保留原始关键温度点（可选）
-                cpu_crit: cpu_crit {
-                    temperature = <95000>;
-                    hysteresis = <2000>;
-                    type = "critical";
-                };
-            };
-
-            cooling-maps {
-                map0 {
-                    trip = <&cpu_cool>;
-                    cooling-device = <&pwm_fan 0 0>;
-                };
-                
-                map1 {
-                    trip = <&cpu_passive>;
-                    cooling-device = <&pwm_fan 0 1>;
-                };
-                
-                map2 {
-                    trip = <&cpu_active>;
-                    cooling-device = <&pwm_fan 1 2>;
-                };
-
-                map3 {
-                    trip = <&cpu_warm>;
-                    cooling-device = <&pwm_fan 2 3>;
-                };
-
-                map4 {
-                    trip = <&cpu_hot>;
-                    cooling-device = <&pwm_fan 3 4>;
-                };
-            };
-        };
-    };
         pwm_fan: pwm-fan {
 		compatible = "pwm-fan";
 		cooling-levels = <0 100 150 200 255>;
@@ -177,3 +108,65 @@
 &sata0 {
 	target-supply = <&vcc5v0_ahci>;
 };
+
+&cpu_thermal {
+            trips {
+                cpu_cool: cpu_cool {
+                    temperature = <1000>;
+                    hysteresis = <2000>;
+                    type = "passive";
+                };
+
+                cpu_passive: cpu_passive {
+                    temperature = <40000>;
+                    hysteresis = <2000>;
+                    type = "passive";
+                };
+
+                cpu_active: cpu_active {
+                    temperature = <50000>;
+                    hysteresis = <2000>;
+                    type = "passive";
+                };
+
+                cpu_warm: cpu_warm {
+                    temperature = <60000>;
+                    hysteresis = <2000>;
+                    type = "passive";
+                };
+
+                cpu_hot: cpu_hot {
+                    temperature = <70000>;
+                    hysteresis = <2000>;
+                    type = "passive";
+                };
+
+            };
+
+            cooling-maps {
+                map0 {
+                    trip = <&cpu_cool>;
+                    cooling-device = <&pwm_fan 0 0>;
+                };
+                
+                map1 {
+                    trip = <&cpu_passive>;
+                    cooling-device = <&pwm_fan 0 1>;
+                };
+                
+                map2 {
+                    trip = <&cpu_active>;
+                    cooling-device = <&pwm_fan 1 2>;
+                };
+
+                map3 {
+                    trip = <&cpu_warm>;
+                    cooling-device = <&pwm_fan 2 3>;
+                };
+
+                map4 {
+                    trip = <&cpu_hot>;
+                    cooling-device = <&pwm_fan 3 4>;
+                };
+            };
+       };
