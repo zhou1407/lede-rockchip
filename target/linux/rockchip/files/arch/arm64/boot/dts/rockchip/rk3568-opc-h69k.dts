@@ -177,5 +177,3 @@
 &sata0 {
 	target-supply = <&vcc5v0_ahci>;
 };
-&cpu-thermal {
-              
