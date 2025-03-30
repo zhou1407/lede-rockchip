@@ -109,7 +109,9 @@
         };
     };
 };
-
+&pwm0 {
+    status = "okay";
+};
 &sata0 {
 	target-supply = <&vcc5v0_ahci>;
 };
