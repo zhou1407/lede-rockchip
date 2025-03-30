@@ -103,6 +103,11 @@
 			rockchip,pins = <0 RK_PC5 RK_FUNC_GPIO &pcfg_pull_none>;
 		};
 	};
+    pwm0 {
+        pwm0m0_pins: pwm0m0-pins {
+            rockchip,pins = <0 RK_PB7 1 &pcfg_pull_none>;
+        };
+    };
 };
 
 &sata0 {
