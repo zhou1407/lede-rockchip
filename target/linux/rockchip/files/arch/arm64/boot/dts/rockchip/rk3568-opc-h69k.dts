@@ -30,7 +30,7 @@
 
         pwm_fan: pwm-fan {
 		compatible = "pwm-fan";
-		cooling-levels = <0 100 150 200 255>;
+		cooling-levels = <0 70 120 180 255>;
 		#cooling-cells = <2>;
 		pwms = <&pwm0 0 50000 0>;
 	};
@@ -115,26 +115,26 @@
 &cpu_thermal {
             trips {
                 cpu_passive: cpu_passive {
+                    temperature = <32000>;
+                    hysteresis = <2000>;
+                    type = "passive";
+                };
+
+                cpu_active: cpu_active {
                     temperature = <40000>;
                     hysteresis = <5000>;
                     type = "passive";
                 };
 
-                cpu_active: cpu_active {
-                    temperature = <50000>;
-                    hysteresis = <5000>;
-                    type = "passive";
-                };
-
                 cpu_warm: cpu_warm {
-                    temperature = <60000>;
-                    hysteresis = <5000>;
+                    temperature = <45000>;
+                    hysteresis = <2000>;
                     type = "passive";
                 };
 
                 cpu_hot: cpu_hot {
-                    temperature = <70000>;
-                    hysteresis = <8000>;
+                    temperature = <50000>;
+                    hysteresis = <2000>;
                     type = "passive";
                 };
 
